@@ -10,5 +10,28 @@ string Urzadzenie::podsumowanie() {
 }
 
 void Urzadzenie::setWaga(string s) {
-	//tutaj trzeba dodać odpowiedni kod
+	string waga;
+	string jedn;
+	bool d = false;
+	char* znak = &s[0];
+	while (*znak != '\0') {
+		if (*znak == ',' && !d) {
+			*znak = '.';
+		}
+		if ((*znak >= '0' && *znak <= '9') || (*znak == '.' && !d)) {
+			waga += *znak;
+			if (*znak == '.') 
+				d = !d;
+		}
+		if (*znak >= 'A' && *znak <= 'Z') {
+
+			*znak = 'a' + (*znak - 'A');
+		}
+		if (*znak >= 'a' && *znak <= 'z' && waga.size()> 0) {
+			jedn += *znak;
+		}
+
+		znak++;
+	}
+	cout << jedn << " " << waga  << "\n";
 }
