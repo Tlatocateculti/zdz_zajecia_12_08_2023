@@ -10,5 +10,5 @@ string Urzadzenie::podsumowanie() {
 }
 
 void Urzadzenie::setWaga(string s) {
-
+	//tutaj trzeba dodać odpowiedni kod
 }
