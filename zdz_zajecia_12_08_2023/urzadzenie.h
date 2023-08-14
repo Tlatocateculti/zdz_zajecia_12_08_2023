@@ -6,6 +6,8 @@
 #include <ctime>
 #include <sstream>
 
+#include "monitor.h"
+
 using namespace std;
 
 class Urzadzenie
@@ -22,6 +24,7 @@ private:
 	int waga;
 
 public:
+	
 	Urzadzenie() { }
 	~Urzadzenie() { }
 
@@ -67,8 +70,10 @@ public:
 	}
 
 	string podsumowanie();
+
+	friend class Monitor;
 };
 
-#endif
+#endif _RZADZENIE_
 
 

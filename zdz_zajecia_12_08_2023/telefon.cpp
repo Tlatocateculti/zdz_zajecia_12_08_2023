@@ -9,6 +9,7 @@ Telefon::Telefon(string nazwa, string model, int waga, int rokProdukcji)  {
 	setModel(model);
 	setWaga(waga);
 	setRokProdukcji(rokProdukcji);
+	
 }
 
 string Telefon::podsumowanie() {

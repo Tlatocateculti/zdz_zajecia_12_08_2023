@@ -10,14 +10,15 @@ using namespace std;
 
 int main()
 {
-    /*Telefon t("Nokia", "3310", 810, 2002);
-    cout << t.podsumowanie() << "\n";
+    Telefon t("Nokia", "3310", 810, 2002);
+   /* cout << t.podsumowanie() << "\n";
     cout << t;
     Telefon t2("Samsung", "S21A");
     cout << t2;*/
     Urzadzenie u;
-    u.setWaga("1,545 GRAM");
+    u.setWaga("1,545 KG");
     
+
     /*Urzadzenie u;
     u.setWaga(145);
     u.setRokProdukcji(2020);

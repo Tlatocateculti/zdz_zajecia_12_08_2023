@@ -10,10 +10,12 @@ string Urzadzenie::podsumowanie() {
 }
 
 void Urzadzenie::setWaga(string s) {
+	
 	string waga;
 	string jedn;
 	bool d = false;
 	char* znak = &s[0];
+
 	while (*znak != '\0') {
 		if (*znak == ',' && !d) {
 			*znak = '.';
@@ -33,5 +35,10 @@ void Urzadzenie::setWaga(string s) {
 
 		znak++;
 	}
-	cout << jedn << " " << waga  << "\n";
+	stringstream ss;
+	ss << waga;
+	double wtmp = .0;
+	ss >> wtmp;
+	if (jedn[0] == 'k') wtmp *= 1000;
+	cout << jedn << " " << wtmp  << "\n";
 }
